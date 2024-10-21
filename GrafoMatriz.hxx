@@ -6,12 +6,12 @@ Grafo<T>::Grafo() {
 }
 
 template <class T>
-void Grafo<T>::setVertices(std::vector<T> vertices) {
+void Grafo<T>::setVertices(std::vector<T> v) {
     this->vertices = vertices;
 }
 
 template <class T>
-void Grafo<T>::setAristas (int** aristas) {
+void Grafo<T>::setAristas (int** a) {
     this->aristas = aristas;
 }
 
@@ -98,10 +98,10 @@ bool Grafo<T>::insertarArista(T ori, T des, int cos) {
 }
 
 template <class T>
-int Grafo<T>::buscarArista(T origen, T destino) {
+int Grafo<T>::buscarArista(T ori, T des) {
 		int res = -1;
-		int i_ori = buscarVertice(origen);
-		int i_des = buscarVertice(destino);
+		int i_ori = buscarVertice(ori);
+		int i_des = buscarVertice(des);
 		if ( i_ori != -1 && i_des != -1 ) {
 			res = *(*(aristas+i_ori)+i_des);
 		}
