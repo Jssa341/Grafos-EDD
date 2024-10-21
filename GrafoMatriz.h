@@ -9,18 +9,18 @@ class Grafo {
         int** aristas;
     public:
         Grafo();
-        void setVertices(std::vector<T> vertices);
-        void setAristas (int** aristas);
+        void setVertices(std::vector<T> v);
+        void setAristas (int** a);
         std::vector<T> getVertices();
         int** getAristas();
         int cantVertices();
         int cantAristas();
-        int buscarVertice(T ver);
-        bool insertarVertice(T ver);
+        int buscarVertice(T vert);
+        bool insertarVertice(T vert);
         bool insertarArista(T ori, T des, int cos);
-        int buscarArista(T origen, T destino);
+        int buscarArista(T ori, T des);
         bool eliminarVertice(T ver);
-        bool eliminarArista (T origen, T destino);    
+        bool eliminarArista (T ori, T des);    
 };
 
 #include "Grafo.hxx"
