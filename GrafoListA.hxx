@@ -1,32 +1,36 @@
 # include "GrafoListA.h"
 
 template <class T, class U>
-void setVertices(std::vector<T> v){
+Grafo2<T,U>::Grafo2() {
+    this->aristas = NULL;
+}
+template <class T, class U>
+void Grafo2<T,U>::setVertices(std::vector<T> v){
 	this->vertices = v;
 }
 
 template <class T, class U>
-void setAristas(std::vector< std::list< pair<int,U> > > a){
+void Grafo2<T,U>::setAristas(std::vector< std::list< pair<int,U> > > a){
 	this->aristas = a;
 }
 
 template <class T, class U>
-std::vector<T> getVertices(){
+std::vector<T> Grafo2<T,U>::getVertices(){
 	return this->vertices;
 }
 
 template <class T, class U>
-std::vector< std::list< pair<int,U> > > getAristas(){
+std::vector< std::list< pair<int,U> > > Grafo2<T,U>::getAristas(){
 	return this->aristas;
 }
 
 template <class T, class U>
-int cantVertices() { 
+int Grafo2<T,U>::cantVertices() { 
 	return vertices.size(); 
 }
 
 template <class T, class U>
-int cantAristas() {
+int Grafo2<T,U>::cantAristas() {
 	int suma = 0;
 	for (int i = 0; i < cantVertices(); i++) {
 		suma += aristas[i].size();
@@ -35,7 +39,7 @@ int cantAristas() {
 }
 
 template <class T, class U>
-int buscarVertice(T vert) {
+int Grafo2<T,U>::buscarVertice(T vert) {
 	int ind = -1;
 	for (int i = 0; i < cantVertices(); i++) {
 		if (vertices[i] == vert)  ind = i;
@@ -44,7 +48,7 @@ int buscarVertice(T vert) {
 }
 
 template <class T, class U>
-bool insertarVertice(T vert) {
+bool Grafo2<T,U>::insertarVertice(T vert) {
 	bool res = false;
 	if (buscarVertice(vert) == -1) {
 		vertices.push_back(vert);
@@ -55,7 +59,7 @@ bool insertarVertice(T vert) {
 }
 
 template <class T, class U>
-bool insertarArista(T ori, T des, U cos) {
+bool Grafo2<T,U>::insertarArista(T ori, T des, U cos) {
 	bool res = false;
 	int i_ori = buscarVertice(ori);
 	int i_des = buscarVertice(des);
@@ -77,7 +81,7 @@ bool insertarArista(T ori, T des, U cos) {
 }
 
 template <class T, class U>
-U buscarArista(T ori, T des) {
+U Grafo2<T,U>::buscarArista(T ori, T des) {
 	U res = -1;
 	int i_ori = buscarVertice(ori);
 	int i_des = buscarVertice(des);
@@ -91,7 +95,7 @@ U buscarArista(T ori, T des) {
 }
 
 template <class T, class U>
-bool eliminarVertice(T vert) {
+bool Grafo2<T,U>::eliminarVertice(T vert) {
 	bool res = false;
 	int i_vert = buscarVertice(vert);
 	if ( i_vert != -1) {
@@ -116,7 +120,7 @@ bool eliminarVertice(T vert) {
 }
 
 template <class T, class U>
-bool eliminarArista(T ori, T des) {
+bool Grafo2<T,U>::eliminarArista(T ori, T des) {
 	bool res = false;
 	int i_ori = buscarVertice(ori);
 	int i_des = buscarVertice(des);
