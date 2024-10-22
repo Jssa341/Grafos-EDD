@@ -3,12 +3,12 @@
 #include <vector>
 
 template <class T, class U>
-class Grafo {
+class Grafo2 {
 private:
 	std::vector<T> vertices;
 	std::vector< std::list< pair<int,U> > > aristas;
 public:
-	Grafo();
+	Grafo2();
 	void setVertices(std::vector<T> v);
 	void setAristas(std::vector< std::list< pair<int,U> > > a);
 	std::vector<T> getVertices();
