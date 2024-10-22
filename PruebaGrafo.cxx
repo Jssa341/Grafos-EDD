@@ -33,11 +33,11 @@ int main() {
     showMatriz(grafo);
 
     // Mostrar las aristas
-    std::cout << "Aristas desde vértice 1:" << std::endl;
+    std::cout << "Aristas desde vértice 4:" << std::endl;
     for (int i = 0; i < grafo.cantVertices(); ++i) {
-        int peso = grafo.buscarArista(1, grafo.getVertices()[i]);
+        int peso = grafo.buscarArista(4, grafo.getVertices()[i]);
         if (peso != 0) {
-            std::cout << "  Vértice 1 a Vértice " << grafo.getVertices()[i] << " con peso " << peso << std::endl;
+            std::cout << "  Vértice 4 a Vértice " << grafo.getVertices()[i] << " con peso " << peso << std::endl;
         }
     }
 
@@ -70,9 +70,9 @@ int main() {
     // Mostrar las aristas después de la eliminación
     std::cout << "Aristas desde vértice 4 después de la eliminación:" << std::endl;
     for (int i = 0; i < grafo.cantVertices(); ++i) {
-        int peso = grafo.buscarArista(1, grafo.getVertices()[i]);
+        int peso = grafo.buscarArista(4, grafo.getVertices()[i]);
         if (peso != 0) {
-            std::cout << "  Vértice 1 a Vértice " << grafo.getVertices()[i] << " con peso " << peso << std::endl;
+            std::cout << "  Vértice 4 a Vértice " << grafo.getVertices()[i] << " con peso " << peso << std::endl;
         }
     }
 
