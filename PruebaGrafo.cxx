@@ -24,13 +24,13 @@ int main() {
 
     // Insertar aristas
     std::cout << "Insertando aristas..." << std::endl;
-    grafo.insertarArista(1, 2, 10);
-    grafo.insertarArista(1, 3, 15);
-    grafo.insertarArista(2, 4, 20);
-    grafo.insertarArista(3, 4, 25);
+    grafo.insertarArista(4, 12, 10);
+    grafo.insertarArista(8, 16, 15);
+    grafo.insertarArista(16, 4, 20);
+    grafo.insertarArista(12, 8, 25);
 
     // Mostrar la matriz de adyacencia
-    mostrarMatrizAdyacencia(grafo);
+    showMatriz(grafo);
 
     // Mostrar las aristas
     std::cout << "Aristas desde vértice 1:" << std::endl;
@@ -42,11 +42,11 @@ int main() {
     }
 
     // Eliminar un vértice
-    std::cout << "Eliminando vértice 2..." << std::endl;
-    if (grafo.eliminarVertice(2)) {
-        std::cout << "Vértice 2 eliminado." << std::endl;
+    std::cout << "Eliminando vértice 8..." << std::endl;
+    if (grafo.eliminarVertice(8)) {
+        std::cout << "Vértice 8 eliminado." << std::endl;
     } else {
-        std::cout << "Vértice 2 no encontrado." << std::endl;
+        std::cout << "Vértice 8 no encontrado." << std::endl;
     }
 
     // Mostrar los vértices después de la eliminación
@@ -57,18 +57,18 @@ int main() {
     std::cout << std::endl;
 
     // Mostrar la matriz de adyacencia después de la eliminación
-    mostrarMatrizAdyacencia(grafo);
+    showMatriz(grafo);
 
     // Eliminar una arista
-    std::cout << "Eliminando la arista entre 1 y 3..." << std::endl;
-    if (grafo.eliminarArista(1, 3)) {
-        std::cout << "Arista entre 1 y 3 eliminada." << std::endl;
+    std::cout << "Eliminando la arista entre 12 y 16..." << std::endl;
+    if (grafo.eliminarArista(12, 16)) {
+        std::cout << "Arista entre 12 y 16 eliminada." << std::endl;
     } else {
-        std::cout << "Arista entre 1 y 3 no encontrada." << std::endl;
+        std::cout << "Arista entre 12 y 16 no encontrada." << std::endl;
     }
 
     // Mostrar las aristas después de la eliminación
-    std::cout << "Aristas desde vértice 1 después de la eliminación:" << std::endl;
+    std::cout << "Aristas desde vértice 4 después de la eliminación:" << std::endl;
     for (int i = 0; i < grafo.cantVertices(); ++i) {
         int peso = grafo.buscarArista(1, grafo.getVertices()[i]);
         if (peso != 0) {
