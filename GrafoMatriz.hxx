@@ -1,4 +1,4 @@
-#include "Grafo.h"
+#include "GrafoMatriz.h"
 
 template <class T>
 Grafo<T>::Grafo() {
