@@ -1,12 +1,6 @@
 # include "GrafoListA.h"
 
-template <class T, class U>
-class Grafo {
-private:
-	std::vector<T> vertices;
-	std::vector< std::list< pair<int,U> > > aristas;
-public:
-	Grafo();
+
 	void setVertices(std::vector<T> v){
 		this->vertices = v;
 	}
@@ -112,4 +106,4 @@ public:
 		}
 		return res;
 	}
-};
+
