@@ -22,5 +22,7 @@ public:
         bool eliminarArista(T ori, T des);
 };
 
+#include "GrafoListA.hxx"
+#endif
 
   
