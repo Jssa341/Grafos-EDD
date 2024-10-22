@@ -8,12 +8,18 @@ private:
 public:
 	Grafo();
 	void setVertices(std::vector<T> v){
-    
-  }
+		this->vertices = v;
+	}
 
-	void setAristas(std::vector< std::list< pair<int,U> > > a);
-	std::vector<T> getVertices();
-	std::vector< std::list< pair<int,U> > > getAristas();
+	void setAristas(std::vector< std::list< pair<int,U> > > a){
+		this->aristas = a;
+	}
+	std::vector<T> getVertices(){
+		return this->vertices;
+	}
+	std::vector< std::list< pair<int,U> > > getAristas(){
+		return this->aristas;
+	}
 	int cantVertices() { return vertices.size(); }
 	int cantAristas() {
 		int suma = 0;
