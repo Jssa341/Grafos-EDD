@@ -7,12 +7,12 @@ Grafo<T>::Grafo() {
 
 template <class T>
 void Grafo<T>::setVertices(std::vector<T> v) {
-    this->vertices = vertices;
+    this->vertices = v;
 }
 
 template <class T>
 void Grafo<T>::setAristas (int** a) {
-    this->aristas = aristas;
+    this->aristas = a;
 }
 
 template <class T>
