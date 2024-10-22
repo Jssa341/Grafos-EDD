@@ -157,10 +157,10 @@ bool Grafo<T>::eliminarVertice(T ver) {
 
 
 template <class T>
-bool Grafo<T>::eliminarArista (T origen, T destino) {
+bool Grafo<T>::eliminarArista (T ori, T des) {
 		bool res = false;
-		int i_ori = buscarVertice(origen);
-		int i_des = buscarVertice(destino);
+		int i_ori = buscarVertice(ori);
+		int i_des = buscarVertice(des);
 		if ( i_ori != -1 && i_des != -1 ) {
 			*(*(aristas+i_ori)+i_des) = 0;
 			res = true;
