@@ -1,9 +1,6 @@
 # include "GrafoListA.h"
 
-template <class T, class U>
-Grafo2<T,U>::Grafo2() {
-    this->aristas = NULL;
-}
+
 template <class T, class U>
 void Grafo2<T,U>::setVertices(std::vector<T> v){
 	this->vertices = v;
