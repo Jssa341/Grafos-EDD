@@ -23,5 +23,5 @@ class Grafo {
         bool eliminarArista (T ori, T des);    
 };
 
-#include "Grafo.hxx"
+#include "GrafoMatriz.hxx"
 #endif
